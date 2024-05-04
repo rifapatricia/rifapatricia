@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, Helvetica, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --activenumber: #f39bd5;
+    --backgroundcolor: #a93e6a;
+    --bordercolor: #808080;
+    --white: #ffffff;
+    --infobox: #d2357d;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    background-color: var(--backgroundcolor);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.numberscontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+}
+
+.numberscontainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.3rem;
+    height: 4.3rem;
+    background-color: var(--white);
+    font-weight: 700;
+    border: 1px solid var(--bordercolor);
+}
+
+.numberscontainer div.active {
+    background-color: var(--activenumber);
+}
+
+.infocontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pixnumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--infobox);
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+}
+
+.pixnumber span {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.infos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white);
+}
+
+.imgprice img {
+    width: 15rem;
+}
+
+.productinfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.icon ion-icon {
+    font-size: 6rem;
+}
+
+#text2 {
+    margin-left: 2rem;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--infobox);
+    padding: .5rem 2rem;
+    width: fit-content;
+    border-radius: 5rem;
+    margin-left: 2rem;
+}
+
+.day span {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+@media (width <= 440px) {
+    body {
+        overflow: hidden;
+    }
+    .numberscontainer div {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+}
+
+@media (width <= 375px) {
+    .numberscontainer div {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (width <= 320px) {
+    .numberscontainer div {
+        width: 2rem;
+        height: 2rem;
+    }
+}
